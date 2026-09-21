@@ -665,10 +665,144 @@ footer {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.announcement-banner {
+.announcements-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.announcement-item {
   background-color: #4caf50;
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 12px 15px;
   font-weight: bold;
+}
+
+/* Announcements management modal */
+.announcements-modal-content {
+  max-width: 520px;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.announcements-modal-content h4 {
+  margin: 15px 0 10px;
+  color: var(--text-primary);
+}
+
+.announcements-modal-content hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 15px 0;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+#announcement-message {
+  width: 100%;
+  resize: vertical;
+  font-family: inherit;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.announcement-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+#announcements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.announcement-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background-color: var(--background);
+}
+
+.announcement-card.expired {
+  opacity: 0.6;
+}
+
+.announcement-card p {
+  margin: 0 0 6px;
+  word-break: break-word;
+}
+
+.announcement-card .announcement-dates {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.announcement-card .announcement-status {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.announcement-status.status-active {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.announcement-status.status-scheduled {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.announcement-status.status-expired {
+  background-color: #f1f1f1;
+  color: #666;
+}
+
+.announcement-card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.announcement-card-actions button {
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.edit-announcement-btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+}
+
+.edit-announcement-btn:hover {
+  background-color: var(--primary-light);
+}
+
+.delete-announcement-btn {
+  background-color: #f1f1f1;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+}
+
+.delete-announcement-btn:hover {
+  background-color: #dc3545;
+  color: white;
 }
